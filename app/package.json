@@ -1,0 +1,12 @@
+{
+  "name": "devops-test-app",
+  "version": "1.0.0",
+  "description": "Simple HTTP server for DevOps technical test",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["devops", "test"],
+  "author": "",
+  "license": "MIT"
+}
