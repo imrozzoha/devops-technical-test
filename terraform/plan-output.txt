@@ -1,0 +1,915 @@
+[0m[1mmodule.asg.data.aws_ami.amazon_linux_2023: Reading...[0m[0m
+[0m[1mmodule.asg.data.aws_ami.amazon_linux_2023: Read complete after 1s [id=ami-01666f07a60242183][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.alb.aws_lb.main[0m will be created
+[0m  [32m+[0m[0m resource "aws_lb" "main" {
+      [32m+[0m[0m arn                                                          = (known after apply)
+      [32m+[0m[0m arn_suffix                                                   = (known after apply)
+      [32m+[0m[0m client_keep_alive                                            = 3600
+      [32m+[0m[0m desync_mitigation_mode                                       = "defensive"
+      [32m+[0m[0m dns_name                                                     = (known after apply)
+      [32m+[0m[0m drop_invalid_header_fields                                   = false
+      [32m+[0m[0m enable_deletion_protection                                   = false
+      [32m+[0m[0m enable_http2                                                 = true
+      [32m+[0m[0m enable_tls_version_and_cipher_suite_headers                  = false
+      [32m+[0m[0m enable_waf_fail_open                                         = false
+      [32m+[0m[0m enable_xff_client_port                                       = false
+      [32m+[0m[0m enable_zonal_shift                                           = false
+      [32m+[0m[0m enforce_security_group_inbound_rules_on_private_link_traffic = (known after apply)
+      [32m+[0m[0m id                                                           = (known after apply)
+      [32m+[0m[0m idle_timeout                                                 = 60
+      [32m+[0m[0m internal                                                     = false
+      [32m+[0m[0m ip_address_type                                              = (known after apply)
+      [32m+[0m[0m load_balancer_type                                           = "application"
+      [32m+[0m[0m name                                                         = "devops-test-dev-alb"
+      [32m+[0m[0m name_prefix                                                  = (known after apply)
+      [32m+[0m[0m preserve_host_header                                         = false
+      [32m+[0m[0m security_groups                                              = (known after apply)
+      [32m+[0m[0m subnets                                                      = (known after apply)
+      [32m+[0m[0m tags                                                         = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-alb"
+        }
+      [32m+[0m[0m tags_all                                                     = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-alb"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+      [32m+[0m[0m vpc_id                                                       = (known after apply)
+      [32m+[0m[0m xff_header_processing_mode                                   = "append"
+      [32m+[0m[0m zone_id                                                      = (known after apply)
+
+      [32m+[0m[0m subnet_mapping (known after apply)
+    }
+
+[1m  # module.alb.aws_lb_listener.http[0m will be created
+[0m  [32m+[0m[0m resource "aws_lb_listener" "http" {
+      [32m+[0m[0m arn                                                                   = (known after apply)
+      [32m+[0m[0m id                                                                    = (known after apply)
+      [32m+[0m[0m load_balancer_arn                                                     = (known after apply)
+      [32m+[0m[0m port                                                                  = 80
+      [32m+[0m[0m protocol                                                              = "HTTP"
+      [32m+[0m[0m routing_http_request_x_amzn_mtls_clientcert_header_name               = (known after apply)
+      [32m+[0m[0m routing_http_request_x_amzn_mtls_clientcert_issuer_header_name        = (known after apply)
+      [32m+[0m[0m routing_http_request_x_amzn_mtls_clientcert_leaf_header_name          = (known after apply)
+      [32m+[0m[0m routing_http_request_x_amzn_mtls_clientcert_serial_number_header_name = (known after apply)
+      [32m+[0m[0m routing_http_request_x_amzn_mtls_clientcert_subject_header_name       = (known after apply)
+      [32m+[0m[0m routing_http_request_x_amzn_mtls_clientcert_validity_header_name      = (known after apply)
+      [32m+[0m[0m routing_http_request_x_amzn_tls_cipher_suite_header_name              = (known after apply)
+      [32m+[0m[0m routing_http_request_x_amzn_tls_version_header_name                   = (known after apply)
+      [32m+[0m[0m routing_http_response_access_control_allow_credentials_header_value   = (known after apply)
+      [32m+[0m[0m routing_http_response_access_control_allow_headers_header_value       = (known after apply)
+      [32m+[0m[0m routing_http_response_access_control_allow_methods_header_value       = (known after apply)
+      [32m+[0m[0m routing_http_response_access_control_allow_origin_header_value        = (known after apply)
+      [32m+[0m[0m routing_http_response_access_control_expose_headers_header_value      = (known after apply)
+      [32m+[0m[0m routing_http_response_access_control_max_age_header_value             = (known after apply)
+      [32m+[0m[0m routing_http_response_content_security_policy_header_value            = (known after apply)
+      [32m+[0m[0m routing_http_response_server_enabled                                  = (known after apply)
+      [32m+[0m[0m routing_http_response_strict_transport_security_header_value          = (known after apply)
+      [32m+[0m[0m routing_http_response_x_content_type_options_header_value             = (known after apply)
+      [32m+[0m[0m routing_http_response_x_frame_options_header_value                    = (known after apply)
+      [32m+[0m[0m ssl_policy                                                            = (known after apply)
+      [32m+[0m[0m tags                                                                  = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-listener"
+        }
+      [32m+[0m[0m tags_all                                                              = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-listener"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+      [32m+[0m[0m tcp_idle_timeout_seconds                                              = (known after apply)
+
+      [32m+[0m[0m default_action {
+          [32m+[0m[0m order            = (known after apply)
+          [32m+[0m[0m target_group_arn = (known after apply)
+          [32m+[0m[0m type             = "forward"
+        }
+
+      [32m+[0m[0m mutual_authentication (known after apply)
+    }
+
+[1m  # module.alb.aws_lb_target_group.main[0m will be created
+[0m  [32m+[0m[0m resource "aws_lb_target_group" "main" {
+      [32m+[0m[0m arn                                = (known after apply)
+      [32m+[0m[0m arn_suffix                         = (known after apply)
+      [32m+[0m[0m connection_termination             = (known after apply)
+      [32m+[0m[0m deregistration_delay               = "30"
+      [32m+[0m[0m id                                 = (known after apply)
+      [32m+[0m[0m ip_address_type                    = (known after apply)
+      [32m+[0m[0m lambda_multi_value_headers_enabled = false
+      [32m+[0m[0m load_balancer_arns                 = (known after apply)
+      [32m+[0m[0m load_balancing_algorithm_type      = (known after apply)
+      [32m+[0m[0m load_balancing_anomaly_mitigation  = (known after apply)
+      [32m+[0m[0m load_balancing_cross_zone_enabled  = (known after apply)
+      [32m+[0m[0m name                               = "devops-test-dev-tg"
+      [32m+[0m[0m name_prefix                        = (known after apply)
+      [32m+[0m[0m port                               = 8080
+      [32m+[0m[0m preserve_client_ip                 = (known after apply)
+      [32m+[0m[0m protocol                           = "HTTP"
+      [32m+[0m[0m protocol_version                   = (known after apply)
+      [32m+[0m[0m proxy_protocol_v2                  = false
+      [32m+[0m[0m slow_start                         = 0
+      [32m+[0m[0m tags                               = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-tg"
+        }
+      [32m+[0m[0m tags_all                           = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-tg"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+      [32m+[0m[0m target_type                        = "instance"
+      [32m+[0m[0m vpc_id                             = (known after apply)
+
+      [32m+[0m[0m health_check {
+          [32m+[0m[0m enabled             = true
+          [32m+[0m[0m healthy_threshold   = 2
+          [32m+[0m[0m interval            = 30
+          [32m+[0m[0m matcher             = "200"
+          [32m+[0m[0m path                = "/health"
+          [32m+[0m[0m port                = "traffic-port"
+          [32m+[0m[0m protocol            = "HTTP"
+          [32m+[0m[0m timeout             = 5
+          [32m+[0m[0m unhealthy_threshold = 2
+        }
+
+      [32m+[0m[0m stickiness (known after apply)
+
+      [32m+[0m[0m target_failover (known after apply)
+
+      [32m+[0m[0m target_group_health (known after apply)
+
+      [32m+[0m[0m target_health_state (known after apply)
+    }
+
+[1m  # module.asg.aws_autoscaling_group.main[0m will be created
+[0m  [32m+[0m[0m resource "aws_autoscaling_group" "main" {
+      [32m+[0m[0m arn                              = (known after apply)
+      [32m+[0m[0m availability_zones               = (known after apply)
+      [32m+[0m[0m default_cooldown                 = (known after apply)
+      [32m+[0m[0m desired_capacity                 = 2
+      [32m+[0m[0m enabled_metrics                  = [
+          [32m+[0m[0m "GroupDesiredCapacity",
+          [32m+[0m[0m "GroupInServiceInstances",
+          [32m+[0m[0m "GroupMaxSize",
+          [32m+[0m[0m "GroupMinSize",
+          [32m+[0m[0m "GroupPendingInstances",
+          [32m+[0m[0m "GroupStandbyInstances",
+          [32m+[0m[0m "GroupTerminatingInstances",
+          [32m+[0m[0m "GroupTotalInstances",
+        ]
+      [32m+[0m[0m force_delete                     = false
+      [32m+[0m[0m force_delete_warm_pool           = false
+      [32m+[0m[0m health_check_grace_period        = 300
+      [32m+[0m[0m health_check_type                = "ELB"
+      [32m+[0m[0m id                               = (known after apply)
+      [32m+[0m[0m ignore_failed_scaling_activities = false
+      [32m+[0m[0m load_balancers                   = (known after apply)
+      [32m+[0m[0m max_size                         = 4
+      [32m+[0m[0m metrics_granularity              = "1Minute"
+      [32m+[0m[0m min_size                         = 2
+      [32m+[0m[0m name                             = "devops-test-dev-asg"
+      [32m+[0m[0m name_prefix                      = (known after apply)
+      [32m+[0m[0m predicted_capacity               = (known after apply)
+      [32m+[0m[0m protect_from_scale_in            = false
+      [32m+[0m[0m service_linked_role_arn          = (known after apply)
+      [32m+[0m[0m target_group_arns                = (known after apply)
+      [32m+[0m[0m vpc_zone_identifier              = (known after apply)
+      [32m+[0m[0m wait_for_capacity_timeout        = "10m"
+      [32m+[0m[0m warm_pool_size                   = (known after apply)
+
+      [32m+[0m[0m availability_zone_distribution (known after apply)
+
+      [32m+[0m[0m capacity_reservation_specification (known after apply)
+
+      [32m+[0m[0m launch_template {
+          [32m+[0m[0m id      = (known after apply)
+          [32m+[0m[0m name    = (known after apply)
+          [32m+[0m[0m version = "$Latest"
+        }
+
+      [32m+[0m[0m mixed_instances_policy (known after apply)
+
+      [32m+[0m[0m tag {
+          [32m+[0m[0m key                 = "Environment"
+          [32m+[0m[0m propagate_at_launch = true
+          [32m+[0m[0m value               = "dev"
+        }
+      [32m+[0m[0m tag {
+          [32m+[0m[0m key                 = "Name"
+          [32m+[0m[0m propagate_at_launch = false
+          [32m+[0m[0m value               = "devops-test-dev-asg"
+        }
+
+      [32m+[0m[0m traffic_source (known after apply)
+    }
+
+[1m  # module.asg.aws_autoscaling_policy.cpu_target[0m will be created
+[0m  [32m+[0m[0m resource "aws_autoscaling_policy" "cpu_target" {
+      [32m+[0m[0m arn                     = (known after apply)
+      [32m+[0m[0m autoscaling_group_name  = "devops-test-dev-asg"
+      [32m+[0m[0m enabled                 = true
+      [32m+[0m[0m id                      = (known after apply)
+      [32m+[0m[0m metric_aggregation_type = (known after apply)
+      [32m+[0m[0m name                    = "devops-test-dev-cpu-target"
+      [32m+[0m[0m policy_type             = "TargetTrackingScaling"
+
+      [32m+[0m[0m target_tracking_configuration {
+          [32m+[0m[0m disable_scale_in = false
+          [32m+[0m[0m target_value     = 70
+
+          [32m+[0m[0m predefined_metric_specification {
+              [32m+[0m[0m predefined_metric_type = "ASGAverageCPUUtilization"
+            }
+        }
+    }
+
+[1m  # module.asg.aws_launch_template.main[0m will be created
+[0m  [32m+[0m[0m resource "aws_launch_template" "main" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m default_version        = (known after apply)
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m image_id               = "ami-01666f07a60242183"
+      [32m+[0m[0m instance_type          = "t3.micro"
+      [32m+[0m[0m latest_version         = (known after apply)
+      [32m+[0m[0m name                   = (known after apply)
+      [32m+[0m[0m name_prefix            = "devops-test-dev-lt-"
+      [32m+[0m[0m tags                   = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-lt"
+        }
+      [32m+[0m[0m tags_all               = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-lt"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+      [32m+[0m[0m user_data              = "IyEvYmluL2Jhc2gNCnNldCAtZQ0KDQojIFVwZGF0ZSBzeXN0ZW0NCnl1bSB1cGRhdGUgLXkNCg0KIyBJbnN0YWxsIE5vZGUuanMgMTgueA0KY3VybCAtZnNTTCBodHRwczovL3JwbS5ub2Rlc291cmNlLmNvbS9zZXR1cF8xOC54IHwgYmFzaCAtDQp5dW0gaW5zdGFsbCAteSBub2RlanMNCg0KIyBDcmVhdGUgYXBwbGljYXRpb24gZGlyZWN0b3J5DQpta2RpciAtcCAvb3B0L2FwcA0KY2QgL29wdC9hcHANCg0KIyBDcmVhdGUgc2VydmVyLmpzDQpjYXQgPiAvb3B0L2FwcC9zZXJ2ZXIuanMgPDwgJ0VPRicNCmNvbnN0IGh0dHAgPSByZXF1aXJlKCdodHRwJyk7DQoNCmNvbnN0IFBPUlQgPSA4MDgwOw0KY29uc3QgSE9TVE5BTUUgPSAnMC4wLjAuMCc7DQoNCmNvbnN0IHNlcnZlciA9IGh0dHAuY3JlYXRlU2VydmVyKChyZXEsIHJlcykgPT4gew0KICBpZiAocmVxLm1ldGhvZCA9PT0gJ0dFVCcgJiYgcmVxLnVybCA9PT0gJy9oZWxsbycpIHsNCiAgICByZXMud3JpdGVIZWFkKDIwMCwgeyAnQ29udGVudC1UeXBlJzogJ3RleHQvcGxhaW4nIH0pOw0KICAgIHJlcy5lbmQoJ09LJyk7DQogIH0gZWxzZSBpZiAocmVxLm1ldGhvZCA9PT0gJ0dFVCcgJiYgcmVxLnVybCA9PT0gJy9oZWFsdGgnKSB7DQogICAgcmVzLndyaXRlSGVhZCgyMDAsIHsgJ0NvbnRlbnQtVHlwZSc6ICd0ZXh0L3BsYWluJyB9KTsNCiAgICByZXMuZW5kKCdoZWFsdGh5Jyk7DQogIH0gZWxzZSB7DQogICAgcmVzLndyaXRlSGVhZCg0MDQsIHsgJ0NvbnRlbnQtVHlwZSc6ICd0ZXh0L3BsYWluJyB9KTsNCiAgICByZXMuZW5kKCdOb3QgRm91bmQnKTsNCiAgfQ0KfSk7DQoNCnNlcnZlci5saXN0ZW4oUE9SVCwgSE9TVE5BTUUsICgpID0+IHsNCiAgY29uc29sZS5sb2coYFNlcnZlciBydW5uaW5nIGF0IGh0dHA6Ly8ke0hPU1ROQU1FfToke1BPUlR9L2ApOw0KfSk7DQoNCi8vIEdyYWNlZnVsIHNodXRkb3duDQpwcm9jZXNzLm9uKCdTSUdURVJNJywgKCkgPT4gew0KICBjb25zb2xlLmxvZygnU0lHVEVSTSBzaWduYWwgcmVjZWl2ZWQ6IGNsb3NpbmcgSFRUUCBzZXJ2ZXInKTsNCiAgc2VydmVyLmNsb3NlKCgpID0+IHsNCiAgICBjb25zb2xlLmxvZygnSFRUUCBzZXJ2ZXIgY2xvc2VkJyk7DQogICAgcHJvY2Vzcy5leGl0KDApOw0KICB9KTsNCn0pOw0KRU9GDQoNCiMgQ3JlYXRlIHBhY2thZ2UuanNvbg0KY2F0ID4gL29wdC9hcHAvcGFja2FnZS5qc29uIDw8ICdFT0YnDQp7DQogICJuYW1lIjogImRldm9wcy10ZXN0LWFwcCIsDQogICJ2ZXJzaW9uIjogIjEuMC4wIiwNCiAgImRlc2NyaXB0aW9uIjogIlNpbXBsZSBIVFRQIHNlcnZlciBmb3IgRGV2T3BzIHRlY2huaWNhbCB0ZXN0IiwNCiAgIm1haW4iOiAic2VydmVyLmpzIiwNCiAgInNjcmlwdHMiOiB7DQogICAgInN0YXJ0IjogIm5vZGUgc2VydmVyLmpzIg0KICB9LA0KICAia2V5d29yZHMiOiBbImRldm9wcyIsICJ0ZXN0Il0sDQogICJhdXRob3IiOiAiIiwNCiAgImxpY2Vuc2UiOiAiTUlUIg0KfQ0KRU9GDQoNCiMgQ3JlYXRlIHN5c3RlbWQgc2VydmljZQ0KY2F0ID4gL2V0Yy9zeXN0ZW1kL3N5c3RlbS9hcHAuc2VydmljZSA8PCAnRU9GJw0KW1VuaXRdDQpEZXNjcmlwdGlvbj1EZXZPcHMgVGVzdCBBcHBsaWNhdGlvbg0KQWZ0ZXI9bmV0d29yay50YXJnZXQNCg0KW1NlcnZpY2VdDQpUeXBlPXNpbXBsZQ0KVXNlcj1yb290DQpXb3JraW5nRGlyZWN0b3J5PS9vcHQvYXBwDQpFeGVjU3RhcnQ9L3Vzci9iaW4vbm9kZSAvb3B0L2FwcC9zZXJ2ZXIuanMNClJlc3RhcnQ9b24tZmFpbHVyZQ0KUmVzdGFydFNlYz0xMA0KU3RhbmRhcmRPdXRwdXQ9YXBwZW5kOi92YXIvbG9nL2FwcC5sb2cNClN0YW5kYXJkRXJyb3I9YXBwZW5kOi92YXIvbG9nL2FwcC5sb2cNCg0KW0luc3RhbGxdDQpXYW50ZWRCeT1tdWx0aS11c2VyLnRhcmdldA0KRU9GDQoNCiMgRW5hYmxlIGFuZCBzdGFydCB0aGUgc2VydmljZQ0Kc3lzdGVtY3RsIGRhZW1vbi1yZWxvYWQNCnN5c3RlbWN0bCBlbmFibGUgYXBwLnNlcnZpY2UNCnN5c3RlbWN0bCBzdGFydCBhcHAuc2VydmljZQ0KDQojIEluc3RhbGwgYW5kIGNvbmZpZ3VyZSBDbG91ZFdhdGNoIEFnZW50DQp5dW0gaW5zdGFsbCAteSBhbWF6b24tY2xvdWR3YXRjaC1hZ2VudA0KDQojIENyZWF0ZSBDbG91ZFdhdGNoIGFnZW50IGNvbmZpZ3VyYXRpb24NCmNhdCA+IC9vcHQvYXdzL2FtYXpvbi1jbG91ZHdhdGNoLWFnZW50L2V0Yy9jb25maWcuanNvbiA8PCAnRU9GJw0Kew0KICAibG9ncyI6IHsNCiAgICAibG9nc19jb2xsZWN0ZWQiOiB7DQogICAgICAiZmlsZXMiOiB7DQogICAgICAgICJjb2xsZWN0X2xpc3QiOiBbDQogICAgICAgICAgew0KICAgICAgICAgICAgImZpbGVfcGF0aCI6ICIvdmFyL2xvZy9hcHAubG9nIiwNCiAgICAgICAgICAgICJsb2dfZ3JvdXBfbmFtZSI6ICIvYXdzL2VjMi9kZXZvcHMtdGVzdC1kZXYiLA0KICAgICAgICAgICAgImxvZ19zdHJlYW1fbmFtZSI6ICJ7aW5zdGFuY2VfaWR9L2FwcC5sb2ciLA0KICAgICAgICAgICAgInRpbWV6b25lIjogIlVUQyINCiAgICAgICAgICB9DQogICAgICAgIF0NCiAgICAgIH0NCiAgICB9DQogIH0NCn0NCkVPRg0KDQojIFN0YXJ0IENsb3VkV2F0Y2ggYWdlbnQNCi9vcHQvYXdzL2FtYXpvbi1jbG91ZHdhdGNoLWFnZW50L2Jpbi9hbWF6b24tY2xvdWR3YXRjaC1hZ2VudC1jdGwgXA0KICAtYSBmZXRjaC1jb25maWcgXA0KICAtbSBlYzIgXA0KICAtcyBcDQogIC1jIGZpbGU6L29wdC9hd3MvYW1hem9uLWNsb3Vkd2F0Y2gtYWdlbnQvZXRjL2NvbmZpZy5qc29uDQoNCmVjaG8gIlVzZXIgZGF0YSBzY3JpcHQgY29tcGxldGVkIHN1Y2Nlc3NmdWxseSINCg=="
+      [32m+[0m[0m vpc_security_group_ids = (known after apply)
+
+      [32m+[0m[0m iam_instance_profile {
+          [32m+[0m[0m name = "devops-test-dev-ec2-profile"
+        }
+
+      [32m+[0m[0m metadata_options {
+          [32m+[0m[0m http_endpoint               = "enabled"
+          [32m+[0m[0m http_protocol_ipv6          = (known after apply)
+          [32m+[0m[0m http_put_response_hop_limit = 1
+          [32m+[0m[0m http_tokens                 = "required"
+          [32m+[0m[0m instance_metadata_tags      = (known after apply)
+        }
+
+      [32m+[0m[0m monitoring {
+          [32m+[0m[0m enabled = true
+        }
+
+      [32m+[0m[0m tag_specifications {
+          [32m+[0m[0m resource_type = "instance"
+          [32m+[0m[0m tags          = {
+              [32m+[0m[0m "Environment" = "dev"
+              [32m+[0m[0m "Name"        = "devops-test-dev-instance"
+            }
+        }
+      [32m+[0m[0m tag_specifications {
+          [32m+[0m[0m resource_type = "volume"
+          [32m+[0m[0m tags          = {
+              [32m+[0m[0m "Environment" = "dev"
+              [32m+[0m[0m "Name"        = "devops-test-dev-volume"
+            }
+        }
+    }
+
+[1m  # module.monitoring.aws_cloudwatch_log_group.app_logs[0m will be created
+[0m  [32m+[0m[0m resource "aws_cloudwatch_log_group" "app_logs" {
+      [32m+[0m[0m arn               = (known after apply)
+      [32m+[0m[0m id                = (known after apply)
+      [32m+[0m[0m log_group_class   = (known after apply)
+      [32m+[0m[0m name              = "/aws/ec2/devops-test-dev"
+      [32m+[0m[0m name_prefix       = (known after apply)
+      [32m+[0m[0m retention_in_days = 7
+      [32m+[0m[0m skip_destroy      = false
+      [32m+[0m[0m tags              = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-logs"
+        }
+      [32m+[0m[0m tags_all          = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-logs"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+    }
+
+[1m  # module.monitoring.aws_cloudwatch_metric_alarm.high_cpu[0m will be created
+[0m  [32m+[0m[0m resource "aws_cloudwatch_metric_alarm" "high_cpu" {
+      [32m+[0m[0m actions_enabled                       = true
+      [32m+[0m[0m alarm_actions                         = (known after apply)
+      [32m+[0m[0m alarm_description                     = "This metric monitors EC2 CPU utilization"
+      [32m+[0m[0m alarm_name                            = "devops-test-dev-high-cpu"
+      [32m+[0m[0m arn                                   = (known after apply)
+      [32m+[0m[0m comparison_operator                   = "GreaterThanThreshold"
+      [32m+[0m[0m dimensions                            = {
+          [32m+[0m[0m "AutoScalingGroupName" = "devops-test-dev-asg"
+        }
+      [32m+[0m[0m evaluate_low_sample_count_percentiles = (known after apply)
+      [32m+[0m[0m evaluation_periods                    = 2
+      [32m+[0m[0m id                                    = (known after apply)
+      [32m+[0m[0m metric_name                           = "CPUUtilization"
+      [32m+[0m[0m namespace                             = "AWS/EC2"
+      [32m+[0m[0m period                                = 300
+      [32m+[0m[0m statistic                             = "Average"
+      [32m+[0m[0m tags                                  = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-high-cpu-alarm"
+        }
+      [32m+[0m[0m tags_all                              = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-high-cpu-alarm"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+      [32m+[0m[0m threshold                             = 80
+      [32m+[0m[0m treat_missing_data                    = "missing"
+    }
+
+[1m  # module.monitoring.aws_cloudwatch_metric_alarm.unhealthy_targets[0m will be created
+[0m  [32m+[0m[0m resource "aws_cloudwatch_metric_alarm" "unhealthy_targets" {
+      [32m+[0m[0m actions_enabled                       = true
+      [32m+[0m[0m alarm_actions                         = (known after apply)
+      [32m+[0m[0m alarm_description                     = "This metric monitors unhealthy targets in the target group"
+      [32m+[0m[0m alarm_name                            = "devops-test-dev-unhealthy-targets"
+      [32m+[0m[0m arn                                   = (known after apply)
+      [32m+[0m[0m comparison_operator                   = "GreaterThanThreshold"
+      [32m+[0m[0m dimensions                            = (known after apply)
+      [32m+[0m[0m evaluate_low_sample_count_percentiles = (known after apply)
+      [32m+[0m[0m evaluation_periods                    = 1
+      [32m+[0m[0m id                                    = (known after apply)
+      [32m+[0m[0m metric_name                           = "UnHealthyHostCount"
+      [32m+[0m[0m namespace                             = "AWS/ApplicationELB"
+      [32m+[0m[0m period                                = 60
+      [32m+[0m[0m statistic                             = "Average"
+      [32m+[0m[0m tags                                  = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-unhealthy-targets-alarm"
+        }
+      [32m+[0m[0m tags_all                              = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-unhealthy-targets-alarm"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+      [32m+[0m[0m threshold                             = 0
+      [32m+[0m[0m treat_missing_data                    = "missing"
+    }
+
+[1m  # module.monitoring.aws_sns_topic.alarms[0m will be created
+[0m  [32m+[0m[0m resource "aws_sns_topic" "alarms" {
+      [32m+[0m[0m arn                         = (known after apply)
+      [32m+[0m[0m beginning_archive_time      = (known after apply)
+      [32m+[0m[0m content_based_deduplication = false
+      [32m+[0m[0m fifo_throughput_scope       = (known after apply)
+      [32m+[0m[0m fifo_topic                  = false
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m name                        = "devops-test-dev-alarms"
+      [32m+[0m[0m name_prefix                 = (known after apply)
+      [32m+[0m[0m owner                       = (known after apply)
+      [32m+[0m[0m policy                      = (known after apply)
+      [32m+[0m[0m signature_version           = (known after apply)
+      [32m+[0m[0m tags                        = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-alarms"
+        }
+      [32m+[0m[0m tags_all                    = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-alarms"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+      [32m+[0m[0m tracing_config              = (known after apply)
+    }
+
+[1m  # module.security.aws_iam_instance_profile.ec2_profile[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_instance_profile" "ec2_profile" {
+      [32m+[0m[0m arn         = (known after apply)
+      [32m+[0m[0m create_date = (known after apply)
+      [32m+[0m[0m id          = (known after apply)
+      [32m+[0m[0m name        = "devops-test-dev-ec2-profile"
+      [32m+[0m[0m name_prefix = (known after apply)
+      [32m+[0m[0m path        = "/"
+      [32m+[0m[0m role        = "devops-test-dev-ec2-role"
+      [32m+[0m[0m tags        = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-ec2-profile"
+        }
+      [32m+[0m[0m tags_all    = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-ec2-profile"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+      [32m+[0m[0m unique_id   = (known after apply)
+    }
+
+[1m  # module.security.aws_iam_role.ec2_role[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role" "ec2_role" {
+      [32m+[0m[0m arn                   = (known after apply)
+      [32m+[0m[0m assume_role_policy    = jsonencode(
+            {
+              [32m+[0m[0m Statement = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m Action    = "sts:AssumeRole"
+                      [32m+[0m[0m Effect    = "Allow"
+                      [32m+[0m[0m Principal = {
+                          [32m+[0m[0m Service = "ec2.amazonaws.com"
+                        }
+                    },
+                ]
+              [32m+[0m[0m Version   = "2012-10-17"
+            }
+        )
+      [32m+[0m[0m create_date           = (known after apply)
+      [32m+[0m[0m force_detach_policies = false
+      [32m+[0m[0m id                    = (known after apply)
+      [32m+[0m[0m managed_policy_arns   = (known after apply)
+      [32m+[0m[0m max_session_duration  = 3600
+      [32m+[0m[0m name                  = "devops-test-dev-ec2-role"
+      [32m+[0m[0m name_prefix           = (known after apply)
+      [32m+[0m[0m path                  = "/"
+      [32m+[0m[0m tags                  = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-ec2-role"
+        }
+      [32m+[0m[0m tags_all              = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-ec2-role"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+      [32m+[0m[0m unique_id             = (known after apply)
+
+      [32m+[0m[0m inline_policy (known after apply)
+    }
+
+[1m  # module.security.aws_iam_role_policy_attachment.cloudwatch_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "cloudwatch_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy"
+      [32m+[0m[0m role       = "devops-test-dev-ec2-role"
+    }
+
+[1m  # module.security.aws_iam_role_policy_attachment.ssm_policy[0m will be created
+[0m  [32m+[0m[0m resource "aws_iam_role_policy_attachment" "ssm_policy" {
+      [32m+[0m[0m id         = (known after apply)
+      [32m+[0m[0m policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+      [32m+[0m[0m role       = "devops-test-dev-ec2-role"
+    }
+
+[1m  # module.security.aws_security_group.alb[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "alb" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "Security group for Application Load Balancer"
+      [32m+[0m[0m egress                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "Allow all outbound traffic"
+              [32m+[0m[0m from_port        = 0
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "-1"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 0
+            },
+        ]
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "HTTP from Internet"
+              [32m+[0m[0m from_port        = 80
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 80
+            },
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "HTTPS from Internet"
+              [32m+[0m[0m from_port        = 443
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 443
+            },
+        ]
+      [32m+[0m[0m name                   = "devops-test-dev-alb-sg"
+      [32m+[0m[0m name_prefix            = (known after apply)
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags                   = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-alb-sg"
+        }
+      [32m+[0m[0m tags_all               = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-alb-sg"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+      [32m+[0m[0m vpc_id                 = (known after apply)
+    }
+
+[1m  # module.security.aws_security_group.ec2[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "ec2" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "Security group for EC2 instances"
+      [32m+[0m[0m egress                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
+                ]
+              [32m+[0m[0m description      = "Allow all outbound traffic"
+              [32m+[0m[0m from_port        = 0
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "-1"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 0
+            },
+        ]
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = []
+              [32m+[0m[0m description      = "Application port from ALB"
+              [32m+[0m[0m from_port        = 8080
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = (known after apply)
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 8080
+            },
+        ]
+      [32m+[0m[0m name                   = "devops-test-dev-ec2-sg"
+      [32m+[0m[0m name_prefix            = (known after apply)
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags                   = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-ec2-sg"
+        }
+      [32m+[0m[0m tags_all               = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-ec2-sg"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+      [32m+[0m[0m vpc_id                 = (known after apply)
+    }
+
+[1m  # module.vpc.aws_eip.nat[0m will be created
+[0m  [32m+[0m[0m resource "aws_eip" "nat" {
+      [32m+[0m[0m allocation_id        = (known after apply)
+      [32m+[0m[0m arn                  = (known after apply)
+      [32m+[0m[0m association_id       = (known after apply)
+      [32m+[0m[0m carrier_ip           = (known after apply)
+      [32m+[0m[0m customer_owned_ip    = (known after apply)
+      [32m+[0m[0m domain               = "vpc"
+      [32m+[0m[0m id                   = (known after apply)
+      [32m+[0m[0m instance             = (known after apply)
+      [32m+[0m[0m ipam_pool_id         = (known after apply)
+      [32m+[0m[0m network_border_group = (known after apply)
+      [32m+[0m[0m network_interface    = (known after apply)
+      [32m+[0m[0m private_dns          = (known after apply)
+      [32m+[0m[0m private_ip           = (known after apply)
+      [32m+[0m[0m ptr_record           = (known after apply)
+      [32m+[0m[0m public_dns           = (known after apply)
+      [32m+[0m[0m public_ip            = (known after apply)
+      [32m+[0m[0m public_ipv4_pool     = (known after apply)
+      [32m+[0m[0m tags                 = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-nat-eip"
+        }
+      [32m+[0m[0m tags_all             = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-nat-eip"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+      [32m+[0m[0m vpc                  = (known after apply)
+    }
+
+[1m  # module.vpc.aws_internet_gateway.main[0m will be created
+[0m  [32m+[0m[0m resource "aws_internet_gateway" "main" {
+      [32m+[0m[0m arn      = (known after apply)
+      [32m+[0m[0m id       = (known after apply)
+      [32m+[0m[0m owner_id = (known after apply)
+      [32m+[0m[0m tags     = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-igw"
+        }
+      [32m+[0m[0m tags_all = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-igw"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+      [32m+[0m[0m vpc_id   = (known after apply)
+    }
+
+[1m  # module.vpc.aws_nat_gateway.main[0m will be created
+[0m  [32m+[0m[0m resource "aws_nat_gateway" "main" {
+      [32m+[0m[0m allocation_id                      = (known after apply)
+      [32m+[0m[0m association_id                     = (known after apply)
+      [32m+[0m[0m connectivity_type                  = "public"
+      [32m+[0m[0m id                                 = (known after apply)
+      [32m+[0m[0m network_interface_id               = (known after apply)
+      [32m+[0m[0m private_ip                         = (known after apply)
+      [32m+[0m[0m public_ip                          = (known after apply)
+      [32m+[0m[0m secondary_private_ip_address_count = (known after apply)
+      [32m+[0m[0m secondary_private_ip_addresses     = (known after apply)
+      [32m+[0m[0m subnet_id                          = (known after apply)
+      [32m+[0m[0m tags                               = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-nat-gw"
+        }
+      [32m+[0m[0m tags_all                           = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-nat-gw"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+    }
+
+[1m  # module.vpc.aws_route_table.private[0m will be created
+[0m  [32m+[0m[0m resource "aws_route_table" "private" {
+      [32m+[0m[0m arn              = (known after apply)
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m owner_id         = (known after apply)
+      [32m+[0m[0m propagating_vgws = (known after apply)
+      [32m+[0m[0m route            = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_block                 = "0.0.0.0/0"
+              [32m+[0m[0m nat_gateway_id             = (known after apply)
+                [90m# (11 unchanged attributes hidden)[0m[0m
+            },
+        ]
+      [32m+[0m[0m tags             = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-private-rt"
+        }
+      [32m+[0m[0m tags_all         = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-private-rt"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+      [32m+[0m[0m vpc_id           = (known after apply)
+    }
+
+[1m  # module.vpc.aws_route_table.public[0m will be created
+[0m  [32m+[0m[0m resource "aws_route_table" "public" {
+      [32m+[0m[0m arn              = (known after apply)
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m owner_id         = (known after apply)
+      [32m+[0m[0m propagating_vgws = (known after apply)
+      [32m+[0m[0m route            = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_block                 = "0.0.0.0/0"
+              [32m+[0m[0m gateway_id                 = (known after apply)
+                [90m# (11 unchanged attributes hidden)[0m[0m
+            },
+        ]
+      [32m+[0m[0m tags             = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-public-rt"
+        }
+      [32m+[0m[0m tags_all         = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-public-rt"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+      [32m+[0m[0m vpc_id           = (known after apply)
+    }
+
+[1m  # module.vpc.aws_route_table_association.private[0][0m will be created
+[0m  [32m+[0m[0m resource "aws_route_table_association" "private" {
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m route_table_id = (known after apply)
+      [32m+[0m[0m subnet_id      = (known after apply)
+    }
+
+[1m  # module.vpc.aws_route_table_association.private[1][0m will be created
+[0m  [32m+[0m[0m resource "aws_route_table_association" "private" {
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m route_table_id = (known after apply)
+      [32m+[0m[0m subnet_id      = (known after apply)
+    }
+
+[1m  # module.vpc.aws_route_table_association.public[0][0m will be created
+[0m  [32m+[0m[0m resource "aws_route_table_association" "public" {
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m route_table_id = (known after apply)
+      [32m+[0m[0m subnet_id      = (known after apply)
+    }
+
+[1m  # module.vpc.aws_route_table_association.public[1][0m will be created
+[0m  [32m+[0m[0m resource "aws_route_table_association" "public" {
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m route_table_id = (known after apply)
+      [32m+[0m[0m subnet_id      = (known after apply)
+    }
+
+[1m  # module.vpc.aws_subnet.private[0][0m will be created
+[0m  [32m+[0m[0m resource "aws_subnet" "private" {
+      [32m+[0m[0m arn                                            = (known after apply)
+      [32m+[0m[0m assign_ipv6_address_on_creation                = false
+      [32m+[0m[0m availability_zone                              = "ap-southeast-2a"
+      [32m+[0m[0m availability_zone_id                           = (known after apply)
+      [32m+[0m[0m cidr_block                                     = "10.0.11.0/24"
+      [32m+[0m[0m enable_dns64                                   = false
+      [32m+[0m[0m enable_resource_name_dns_a_record_on_launch    = false
+      [32m+[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false
+      [32m+[0m[0m id                                             = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block_association_id                 = (known after apply)
+      [32m+[0m[0m ipv6_native                                    = false
+      [32m+[0m[0m map_public_ip_on_launch                        = false
+      [32m+[0m[0m owner_id                                       = (known after apply)
+      [32m+[0m[0m private_dns_hostname_type_on_launch            = (known after apply)
+      [32m+[0m[0m tags                                           = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-private-subnet-1"
+          [32m+[0m[0m "Type"        = "private"
+        }
+      [32m+[0m[0m tags_all                                       = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-private-subnet-1"
+          [32m+[0m[0m "Project"     = "devops-test"
+          [32m+[0m[0m "Type"        = "private"
+        }
+      [32m+[0m[0m vpc_id                                         = (known after apply)
+    }
+
+[1m  # module.vpc.aws_subnet.private[1][0m will be created
+[0m  [32m+[0m[0m resource "aws_subnet" "private" {
+      [32m+[0m[0m arn                                            = (known after apply)
+      [32m+[0m[0m assign_ipv6_address_on_creation                = false
+      [32m+[0m[0m availability_zone                              = "ap-southeast-2b"
+      [32m+[0m[0m availability_zone_id                           = (known after apply)
+      [32m+[0m[0m cidr_block                                     = "10.0.12.0/24"
+      [32m+[0m[0m enable_dns64                                   = false
+      [32m+[0m[0m enable_resource_name_dns_a_record_on_launch    = false
+      [32m+[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false
+      [32m+[0m[0m id                                             = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block_association_id                 = (known after apply)
+      [32m+[0m[0m ipv6_native                                    = false
+      [32m+[0m[0m map_public_ip_on_launch                        = false
+      [32m+[0m[0m owner_id                                       = (known after apply)
+      [32m+[0m[0m private_dns_hostname_type_on_launch            = (known after apply)
+      [32m+[0m[0m tags                                           = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-private-subnet-2"
+          [32m+[0m[0m "Type"        = "private"
+        }
+      [32m+[0m[0m tags_all                                       = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-private-subnet-2"
+          [32m+[0m[0m "Project"     = "devops-test"
+          [32m+[0m[0m "Type"        = "private"
+        }
+      [32m+[0m[0m vpc_id                                         = (known after apply)
+    }
+
+[1m  # module.vpc.aws_subnet.public[0][0m will be created
+[0m  [32m+[0m[0m resource "aws_subnet" "public" {
+      [32m+[0m[0m arn                                            = (known after apply)
+      [32m+[0m[0m assign_ipv6_address_on_creation                = false
+      [32m+[0m[0m availability_zone                              = "ap-southeast-2a"
+      [32m+[0m[0m availability_zone_id                           = (known after apply)
+      [32m+[0m[0m cidr_block                                     = "10.0.1.0/24"
+      [32m+[0m[0m enable_dns64                                   = false
+      [32m+[0m[0m enable_resource_name_dns_a_record_on_launch    = false
+      [32m+[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false
+      [32m+[0m[0m id                                             = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block_association_id                 = (known after apply)
+      [32m+[0m[0m ipv6_native                                    = false
+      [32m+[0m[0m map_public_ip_on_launch                        = true
+      [32m+[0m[0m owner_id                                       = (known after apply)
+      [32m+[0m[0m private_dns_hostname_type_on_launch            = (known after apply)
+      [32m+[0m[0m tags                                           = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-public-subnet-1"
+          [32m+[0m[0m "Type"        = "public"
+        }
+      [32m+[0m[0m tags_all                                       = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-public-subnet-1"
+          [32m+[0m[0m "Project"     = "devops-test"
+          [32m+[0m[0m "Type"        = "public"
+        }
+      [32m+[0m[0m vpc_id                                         = (known after apply)
+    }
+
+[1m  # module.vpc.aws_subnet.public[1][0m will be created
+[0m  [32m+[0m[0m resource "aws_subnet" "public" {
+      [32m+[0m[0m arn                                            = (known after apply)
+      [32m+[0m[0m assign_ipv6_address_on_creation                = false
+      [32m+[0m[0m availability_zone                              = "ap-southeast-2b"
+      [32m+[0m[0m availability_zone_id                           = (known after apply)
+      [32m+[0m[0m cidr_block                                     = "10.0.2.0/24"
+      [32m+[0m[0m enable_dns64                                   = false
+      [32m+[0m[0m enable_resource_name_dns_a_record_on_launch    = false
+      [32m+[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false
+      [32m+[0m[0m id                                             = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block_association_id                 = (known after apply)
+      [32m+[0m[0m ipv6_native                                    = false
+      [32m+[0m[0m map_public_ip_on_launch                        = true
+      [32m+[0m[0m owner_id                                       = (known after apply)
+      [32m+[0m[0m private_dns_hostname_type_on_launch            = (known after apply)
+      [32m+[0m[0m tags                                           = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-public-subnet-2"
+          [32m+[0m[0m "Type"        = "public"
+        }
+      [32m+[0m[0m tags_all                                       = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-public-subnet-2"
+          [32m+[0m[0m "Project"     = "devops-test"
+          [32m+[0m[0m "Type"        = "public"
+        }
+      [32m+[0m[0m vpc_id                                         = (known after apply)
+    }
+
+[1m  # module.vpc.aws_vpc.main[0m will be created
+[0m  [32m+[0m[0m resource "aws_vpc" "main" {
+      [32m+[0m[0m arn                                  = (known after apply)
+      [32m+[0m[0m cidr_block                           = "10.0.0.0/16"
+      [32m+[0m[0m default_network_acl_id               = (known after apply)
+      [32m+[0m[0m default_route_table_id               = (known after apply)
+      [32m+[0m[0m default_security_group_id            = (known after apply)
+      [32m+[0m[0m dhcp_options_id                      = (known after apply)
+      [32m+[0m[0m enable_dns_hostnames                 = true
+      [32m+[0m[0m enable_dns_support                   = true
+      [32m+[0m[0m enable_network_address_usage_metrics = (known after apply)
+      [32m+[0m[0m id                                   = (known after apply)
+      [32m+[0m[0m instance_tenancy                     = "default"
+      [32m+[0m[0m ipv6_association_id                  = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block                      = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block_network_border_group = (known after apply)
+      [32m+[0m[0m main_route_table_id                  = (known after apply)
+      [32m+[0m[0m owner_id                             = (known after apply)
+      [32m+[0m[0m tags                                 = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "Name"        = "devops-test-dev-vpc"
+        }
+      [32m+[0m[0m tags_all                             = {
+          [32m+[0m[0m "Environment" = "dev"
+          [32m+[0m[0m "ManagedBy"   = "Terraform"
+          [32m+[0m[0m "Name"        = "devops-test-dev-vpc"
+          [32m+[0m[0m "Project"     = "devops-test"
+        }
+    }
+
+[1mPlan:[0m [0m30 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  [32m+[0m[0m alb_dns_name     = (known after apply)
+  [32m+[0m[0m application_url  = (known after apply)
+  [32m+[0m[0m asg_name         = "devops-test-dev-asg"
+  [32m+[0m[0m health_check_url = (known after apply)
+  [32m+[0m[0m log_group_name   = "/aws/ec2/devops-test-dev"
+  [32m+[0m[0m vpc_id           = (known after apply)
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Saved the plan to: tfplan
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "tfplan"

@@ -1,0 +1,6 @@
+alb_dns_name = "devops-test-dev-alb-2051043461.ap-southeast-2.elb.amazonaws.com"
+application_url = "http://devops-test-dev-alb-2051043461.ap-southeast-2.elb.amazonaws.com/hello"
+asg_name = "devops-test-dev-asg"
+health_check_url = "http://devops-test-dev-alb-2051043461.ap-southeast-2.elb.amazonaws.com/health"
+log_group_name = "/aws/ec2/devops-test-dev"
+vpc_id = "vpc-08e7968b4a8ea7689"
