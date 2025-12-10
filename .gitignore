@@ -5,9 +5,6 @@
 secrets/
 **/.terraform/*
 *.tfstate
-*.tfstate.*
-*.tfvars
-!*.tfvars.example
 crash.log
 .terraform.lock.hcl
 tfplan
